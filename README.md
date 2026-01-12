@@ -12,6 +12,7 @@ Application web de mise en relation entre refuges et familles d'accueil pour ani
 
 - Node.js >= 18
 - Docker & Docker Compose
+- Port utilisé : 5433
 - npm >= 9
 
 ## Installation
