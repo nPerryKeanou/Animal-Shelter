@@ -17,9 +17,13 @@
     "docker:down": "docker compose down",
     "prisma:generate": "cd apps/backend && npx prisma generate",
     "prisma:migrate": "cd apps/backend && npx prisma migrate dev",
-    "prisma:studio": "cd apps/backend && npx prisma studio"
+    "prisma:studio": "cd apps/backend && npx prisma studio",
+    "format": "biome format --write .",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write ."
   },
   "devDependencies": {
+    "@biomejs/biome": "2.3.11",
     "concurrently": "^8.2.2",
     "typescript": "^5.3.3"
   }
