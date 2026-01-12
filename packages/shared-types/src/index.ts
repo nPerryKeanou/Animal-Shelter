@@ -9,9 +9,9 @@ export interface User {
 }
 
 export enum Role {
-  ADMIN = 'ADMIN',
-  REFUGE = 'REFUGE',
-  FAMILLE_ACCUEIL = 'FAMILLE_ACCUEIL'
+  ADMIN = "ADMIN",
+  REFUGE = "REFUGE",
+  FAMILLE_ACCUEIL = "FAMILLE_ACCUEIL",
 }
 
 export interface Animal {
@@ -24,18 +24,18 @@ export interface Animal {
 }
 
 export enum Espece {
-  CHIEN = 'CHIEN',
-  CHAT = 'CHAT',
-  LAPIN = 'LAPIN',
-  AUTRE = 'AUTRE'
+  CHIEN = "CHIEN",
+  CHAT = "CHAT",
+  LAPIN = "LAPIN",
+  AUTRE = "AUTRE",
 }
 
 export enum StatutAnimal {
-  DISPONIBLE = 'DISPONIBLE',
-  EN_COURS_PLACEMENT = 'EN_COURS_PLACEMENT',
-  PLACE = 'PLACE',
-  ADOPTE = 'ADOPTE',
-  MASQUE = 'MASQUE'
+  DISPONIBLE = "DISPONIBLE",
+  EN_COURS_PLACEMENT = "EN_COURS_PLACEMENT",
+  PLACE = "PLACE",
+  ADOPTE = "ADOPTE",
+  MASQUE = "MASQUE",
 }
 
 export interface DemandeAccueil {
@@ -48,7 +48,7 @@ export interface DemandeAccueil {
 }
 
 export enum StatutDemande {
-  EN_ATTENTE = 'EN_ATTENTE',
-  ACCEPTEE = 'ACCEPTEE',
-  REFUSEE = 'REFUSEE'
+  EN_ATTENTE = "EN_ATTENTE",
+  ACCEPTEE = "ACCEPTEE",
+  REFUSEE = "REFUSEE",
 }
