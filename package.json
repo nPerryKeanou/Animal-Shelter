@@ -28,7 +28,10 @@
     "typescript": "^5.3.3"
   },
   "optionalDependencies": {
-  "@rollup/rollup-darwin-arm64": "*",
-  "@rollup/rollup-linux-x64-gnu": "*"
-}
+    "@rollup/rollup-darwin-arm64": "*",
+    "@rollup/rollup-linux-x64-gnu": "*"
+  },
+  "dependencies": {
+    "zod": "^4.3.5"
+  }
 }
