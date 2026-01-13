@@ -22,12 +22,20 @@
     "indentWidth": 2,
     "lineWidth": 100
   },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
       "style": {
-        "noParameterProperties": "off"
+        "noParameterProperties": "off",
+        "useImportType": "off"
       },
       "suspicious": {
         "noUnknownAtRules": "off"
