@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { PrismaService } from "../prisma.service";
+import { PrismaService } from "../prisma/prisma.service";
 import * as argon2 from "argon2";
 
 @Injectable()
@@ -8,12 +8,19 @@ export class UsersService {
     constructor(private prisma: PrismaService) {}
 
     // creation de de fonction create 
-    async create(data: { email: string; password: string; role: string; phone_number?: string; address?: string }) {
+    async create(
+        data: { 
+            email: string; 
+            password: string; 
+            role: string; 
+            phone_number?: string; 
+            address?: string }) 
+        {
     const passwordHash = await argon2.hash(data.password);
     return this.prisma.user.create({
         data: { 
         email: data.email, 
-        passwordHash, 
+        password:passwordHash, 
         role: data.role, 
         phone_number: data.phone_number, 
         address: data.address 
@@ -33,7 +40,7 @@ export class UsersService {
     async update(id: number, data: any) {
         // modification du mot de passe
     if (data.password) {
-        data.passwordHash = await argon2.hash(data.password);
+        data.password = await argon2.hash(data.password);
         delete data.password;
     }
     return this.prisma.user.update({ where: { id }, data });
