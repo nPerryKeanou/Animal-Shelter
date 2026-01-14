@@ -22,9 +22,9 @@ export const UserSchema = z.object({
   phone_number: z
     .string()
     .regex(/^\+?[0-9]{10,15}$/, { error: "Numéro de téléphone invalide" })
-    .optional()
-    .nullable(),
-  address: z.string().max(255).optional().nullable(),
+    .optional(),
+    
+  address: z.string().max(255).optional(),
   created_at: z.date().optional(),
   updated_at: z.date().optional(),
   deleted_at: z.date().nullable().optional(), // Archivage (Soft Delete)
