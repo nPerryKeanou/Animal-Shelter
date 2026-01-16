@@ -4,6 +4,7 @@ import { ConfigModule } from "@nestjs/config";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { UsersModule } from "./users/users.module";
+import { AnimalsModule } from './animals/animals.module';
 
 /**
  * MODULE RACINE (ROOT MODULE)
@@ -20,6 +21,7 @@ import { UsersModule } from "./users/users.module";
     }),
     PrismaModule,
     UsersModule,
+    AnimalsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
