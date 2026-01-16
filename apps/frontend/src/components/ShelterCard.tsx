@@ -25,7 +25,7 @@ const ShelterCard = ({ shelter_name, description, pfc_user_id, /*logo_url */}: S
           </h3>
 
           {/* Description */}
-          <p className="text-sm text-gray-600 mb-4 text-start">
+          <p className="text-sm text-gray-600 mb-4 text-left">
               <span className="font-semibold ">Description :</span>
             </p>
           {description && (
