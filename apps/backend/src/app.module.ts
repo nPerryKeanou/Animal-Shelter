@@ -1,8 +1,11 @@
 import { Module } from "@nestjs/common";
-import { PrismaModule } from './prisma/prisma.module';
 import { ConfigModule } from "@nestjs/config";
+import { AnimalsModule } from "./animals/animals.module";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
+import { AuthModule } from "./auth/auth.module";
+import { HealthController } from "./health.controller";
+import { PrismaModule } from "./prisma/prisma.module";
 import { UsersModule } from "./users/users.module";
 
 /**
@@ -20,8 +23,10 @@ import { UsersModule } from "./users/users.module";
     }),
     PrismaModule,
     UsersModule,
+    AnimalsModule,
+    AuthModule,
   ],
-  controllers: [AppController],
+  controllers: [AppController, HealthController],
   providers: [AppService],
 })
 export class AppModule {}
