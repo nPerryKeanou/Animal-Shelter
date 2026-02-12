@@ -1,3 +1,6 @@
+# !!!!!!!!!!!!!!!! I need to reconfigure the monorepo with Nx.
+
+
 # Famille d'Accueil Animaux - Monorepo
 
 Application web de mise en relation entre refuges et familles d'accueil pour animaux.
